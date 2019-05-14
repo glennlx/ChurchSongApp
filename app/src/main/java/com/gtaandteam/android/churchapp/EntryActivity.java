@@ -21,7 +21,11 @@ public class EntryActivity extends AppCompatActivity {
         }
 };
 
-
+/*TODO: Whenever Add Entry button is pressed, it must store in the database, the respective value for the field along with a timestamp.
+TODO: Each value should be stored separately
+TODO: The OnLongClick fetches one of the values for that particular field from one of the old entries such that the old timestamp for that
+TODO: particular value is more than a month ago.
+ */
 
 
     @Override
@@ -31,22 +35,31 @@ public class EntryActivity extends AppCompatActivity {
 
         final EditText opening = (EditText)findViewById(R.id.EntryOpening);
         opening.setOnLongClickListener(LongClick);
+
         final EditText bibleReading = (EditText)findViewById(R.id.EntryBible);
         bibleReading.setOnLongClickListener(LongClick);
+
         final EditText thanksGiving = (EditText)findViewById(R.id.EntryThanksGiving);
         thanksGiving.setOnLongClickListener(LongClick);
+
         final EditText offertory = (EditText)findViewById(R.id.EntryOffertory);
         offertory.setOnLongClickListener(LongClick);
+
         final EditText confession = (EditText)findViewById(R.id.EntryConfession);
         confession.setOnLongClickListener(LongClick);
+
         final EditText HC1 = (EditText)findViewById(R.id.EntryHC1);
         HC1.setOnLongClickListener(LongClick);
+
         final EditText HC2 = (EditText)findViewById(R.id.EntryHC2);
         HC2.setOnLongClickListener(LongClick);
+
         final EditText HC3 = (EditText)findViewById(R.id.EntryHC3);
         HC3.setOnLongClickListener(LongClick);
+
         final EditText Doxology = (EditText)findViewById(R.id.EntryDoxology);
         Doxology.setOnLongClickListener(LongClick);
+
         final Button AddEntry = (Button)findViewById(R.id.EntryAddEntry);
 
         AddEntry.setOnClickListener(new View.OnClickListener() {

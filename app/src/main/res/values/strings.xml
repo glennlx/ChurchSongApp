@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Church App</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_generate">GenerateActivity</string>
+    <string name="title_activity_Entry">EntryActivity</string>
+    <string name="Opening">Opening</string>
+    <string name="Bible_Reading">Bible Reading</string>
+    <string name="ThanksGiving">Thanksgiving</string>
+    <string name="Offertory">Offertory</string>
+    <string name="Confession">Confession</string>
+    <string name="HC1">HC1</string>
+    <string name="HC2">HC2</string>
+    <string name="HC3">HC3</string>
+    <string name="Doxology">Doxology</string>
+
+</resources>

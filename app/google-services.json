@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "402965555355",
+    "firebase_url": "https://churchsongapp.firebaseio.com",
+    "project_id": "churchsongapp",
+    "storage_bucket": "churchsongapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402965555355:android:4f835e9cdd95daef",
+        "android_client_info": {
+          "package_name": "com.gtaandteam.android.churchapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402965555355-m0l39hagqramvlp54c6vrfi2t6h4b8h2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gtaandteam.android.churchapp",
+            "certificate_hash": "76ac9511a0968b15feb1fa0d24d530d7a3d7a8c4"
+          }
+        },
+        {
+          "client_id": "402965555355-mj2oqn214d0iq8mgnt45qonr4drf3l92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjOYNIX3NLc70o8jWtUb2VFxvxXeS4vJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402965555355-mj2oqn214d0iq8mgnt45qonr4drf3l92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.gtaandteam.android.churchapp.AddActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CategoryStyle"
+        android:background="@color/Add"
+        android:text="Add Songs"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textColor="@color/Add"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_vertical"
+            android:text=" Song name : " />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:textSize="20dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_height="match_parent"
+            />
+
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lyrics"
+            android:layout_width="0dp"
+            android:padding="8dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#FFFFFF"
+            android:background="@color/Add"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text=" Lyrics" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:paddingRight="16dp"
+            android:padding="8dp"
+            android:textStyle="italic"
+            android:textColor="@android:color/darker_gray"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="(Enter song lyrics to add to the database.)"
+        android:textStyle="italic"
+        android:inputType="textMultiLine"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/EntryAddEntry"
+        android:layout_width="match_parent"
+        android:background="@color/Misc"
+        android:layout_height="wrap_content"
+        android:text="Add Song"
+        android:textSize="18dp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_gravity="center"
+
+        />
+
+</LinearLayout>

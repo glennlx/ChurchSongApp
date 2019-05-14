@@ -1,0 +1,58 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000708</item>
+        <item name="colorPrimaryDark">#000708</item>
+        <item name="colorAccent">#000000</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CategoryStyle">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">@dimen/category_height</item>
+    <item name="android:gravity">center_vertical</item>
+    <item name="android:padding">16dp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+
+        <item name="android:textColor">@android:color/white</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="AppTheme.Custom">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+
+    <style name="CategoryStyleActivity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+    <style name="CategoryStyleActivityRight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/Background</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+    </style>
+
+
+</resources>

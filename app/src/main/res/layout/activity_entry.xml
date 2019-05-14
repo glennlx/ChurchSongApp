@@ -1,0 +1,236 @@
+<?xml version="1.2.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gtaandteam.android.churchapp.EntryActivity"
+    android:background="@color/Entry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <TextView
+            style="@style/CategoryStyleActivity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/Opening" />
+
+        <EditText
+            android:id="@+id/EntryOpening"
+            style="@style/CategoryStyleActivityRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textColor="@color/Entry"
+            android:hint="Tap to enter, hold to generate" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/Bible_Reading"
+            style="@style/CategoryStyleActivity"
+            />
+        <EditText
+            android:id="@+id/EntryBible"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry"
+            style="@style/CategoryStyleActivityRight"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/ThanksGiving"
+            style="@style/CategoryStyleActivity"/>
+
+        <EditText
+            android:id="@+id/EntryThanksGiving"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            style="@style/CategoryStyleActivityRight"
+            android:textColor="@color/Entry"
+
+            android:hint="Tap to enter, hold to generate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/Offertory"
+            style="@style/CategoryStyleActivity"/>
+
+        <EditText
+            android:id="@+id/EntryOffertory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            style="@style/CategoryStyleActivityRight"
+            android:textColor="@color/Entry"
+            android:hint="Tap to enter, hold to generate"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/Confession"
+            style="@style/CategoryStyleActivity"/>
+        <EditText
+            android:id="@+id/EntryConfession"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry"
+            style="@style/CategoryStyleActivityRight"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/HC1"
+            style="@style/CategoryStyleActivity"/>
+
+        <EditText
+            android:id="@+id/EntryHC1"
+            style="@style/CategoryStyleActivityRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/Entry"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/HC2"
+            style="@style/CategoryStyleActivity"/>
+        <EditText
+            android:id="@+id/EntryHC2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry"
+            style="@style/CategoryStyleActivityRight"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/HC3"
+            style="@style/CategoryStyleActivity"/>
+        <EditText
+            android:id="@+id/EntryHC3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry"
+            style="@style/CategoryStyleActivityRight"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/Doxology"
+            style="@style/CategoryStyleActivity"/>
+        <EditText
+            android:id="@+id/EntryDoxology"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry"
+            style="@style/CategoryStyleActivityRight"/>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        >
+
+        <Button
+            android:id="@+id/EntryAddEntry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/Misc"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Add  entry"
+            android:textSize="18dp"
+
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

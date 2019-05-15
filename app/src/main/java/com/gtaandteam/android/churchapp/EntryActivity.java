@@ -6,8 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
@@ -49,6 +51,15 @@ TODO: particular value is more than a month ago.
         setContentView(R.layout.activity_entry);
 
         final String LOG_TAG = this.getClass().getSimpleName();
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.TypeOfSong, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
 
         final EditText opening = (EditText)findViewById(R.id.EntryOpening);
         opening.setOnLongClickListener(LongClick);

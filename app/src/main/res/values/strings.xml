@@ -15,5 +15,14 @@
     <string name="Sankey">Sankey</string>
     <string name="Kristheeya">K.K.</string>
     <string name="Maramon">Maramon</string>
+    <string-array name="TypeOfSong">
+        <item>K.K.</item>
+        <item>Sankey</item>
+        <item>Maramon 2015</item>
+        <item>Maramon 2016</item>
+        <item>Maramon 2017</item>
+        <item>Maramon 2018</item>
+        <item>Maramon 2019</item>
+    </string-array>
 
 </resources>

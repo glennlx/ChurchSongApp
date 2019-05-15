@@ -19,41 +19,14 @@
             android:layout_weight="2"
             android:text="@string/Opening" />
 
-        <RadioGroup
+        <Spinner
+            android:id="@+id/spinner2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@color/MidValue">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingRight="10dp">
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="K.K."
-                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                    android:textColorLink="@android:color/white"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Maramon"
-                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-        </RadioGroup>
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:popupBackground="@android:color/white" />
 
         <EditText
             android:id="@+id/EntryOpening"

@@ -8,9 +8,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.HashMap;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class EntryActivity extends AppCompatActivity {
 
     String message;
+  //  DatabaseReference UserDb1;
 
     View.OnLongClickListener LongClick = new View.OnLongClickListener() {
         @Override
@@ -62,6 +71,12 @@ TODO: particular value is more than a month ago.
 
         final Button AddEntry = (Button)findViewById(R.id.EntryAddEntry);
 
+        Date startDate = Calendar.getInstance().getTime();
+        //String rName=FbAuth.getCurrentUser().getDisplayName();
+
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+        String Date = format.format(startDate);
+
         AddEntry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,7 +87,7 @@ TODO: particular value is more than a month ago.
                         + "\nHC1: " + HC1.getText().toString() + "\nHC2 :"+ HC2.getText().toString() + "\nHC3 :"
                         + HC3.getText().toString() + "\nDoxology :" +Doxology.getText().toString();
 
-                opening.setText("");
+                /*opening.setText("");
                 bibleReading.setText("");
                 thanksGiving.setText("");
                 offertory.setText("");
@@ -80,7 +95,17 @@ TODO: particular value is more than a month ago.
                 HC1.setText("");
                 HC2.setText("");
                 HC3.setText("");
-                Doxology.setText("");
+                Doxology.setText("");*/
+
+                /*HashMap<String,String> Data= new HashMap<>();
+                Data.put("Name", rName);
+                Data.put("Email", Email);
+                Data.put("Phone", PhoneNumber);
+                Data.put("LoginDate", Date);
+                Data.put("FCMToken",localFCM);
+
+                Log.d(LOG_TAG,"Hashmap Done");*/
+
 
                 Intent intent  = new Intent(EntryActivity.this, EntryPopup.class);
                 intent.putExtra("EXTRA_SESSION_ID", message);

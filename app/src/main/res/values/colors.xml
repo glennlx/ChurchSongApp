@@ -8,5 +8,6 @@
     <color name="Search">#006b7d</color>
     <color name="Background">#d7f5ff</color>
     <color name="Misc">#c8dfe3</color>
+    <color name="MidValue">#FFFFFF</color>
 
 </resources>

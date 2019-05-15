@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Entry"
     android:orientation="vertical"
-    tools:context="com.gtaandteam.android.churchapp.EntryActivity"
-    android:background="@color/Entry">
+    tools:context="com.gtaandteam.android.churchapp.EntryActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,38 +19,50 @@
             android:layout_weight="2"
             android:text="@string/Opening" />
 
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/MidValue">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="K.K."
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textColorLink="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Maramon"
+                    android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </RadioGroup>
+
         <EditText
             android:id="@+id/EntryOpening"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:textColor="@color/Entry"
-            android:hint="Tap to enter, hold to generate" />
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.2"
-        >
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2"
-            android:text="@string/Bible_Reading"
-            style="@style/CategoryStyleActivity"
-            />
-        <EditText
-            android:id="@+id/EntryBible"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry"
-            style="@style/CategoryStyleActivityRight"/>
+            android:textColor="@color/Entry" />
 
 
     </LinearLayout>
@@ -61,21 +73,45 @@
         android:layout_weight="1.2">
 
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/ThanksGiving"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/Bible_Reading" />
+
+        <EditText
+            android:id="@+id/EntryBible"
+            style="@style/CategoryStyleActivityRight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2">
+
+        <TextView
+            style="@style/CategoryStyleActivity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/ThanksGiving" />
 
         <EditText
             android:id="@+id/EntryThanksGiving"
+            style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            style="@style/CategoryStyleActivityRight"
-            android:textColor="@color/Entry"
+            android:hint="Tap to enter, hold to generate"
 
-            android:hint="Tap to enter, hold to generate" />
+            android:textColor="@color/Entry" />
 
     </LinearLayout>
 
@@ -85,130 +121,136 @@
         android:layout_weight="1.2">
 
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/Offertory"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/Offertory" />
 
         <EditText
             android:id="@+id/EntryOffertory"
+            style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            style="@style/CategoryStyleActivityRight"
-            android:textColor="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            />
+            android:textColor="@color/Entry" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
-        >
+        android:layout_weight="1.2">
+
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/Confession"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/Confession" />
+
         <EditText
             android:id="@+id/EntryConfession"
+            style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry"
-            style="@style/CategoryStyleActivityRight"/>
+            android:textColor="@color/Entry" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
-        >
+        android:layout_weight="1.2">
+
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/HC1"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/HC1" />
 
         <EditText
             android:id="@+id/EntryHC1"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:textColor="@color/Entry"
             android:layout_weight="3"
-            android:hint="Tap to enter, hold to generate" />
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@color/Entry" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
-        >
+        android:layout_weight="1.2">
+
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/HC2"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/HC2" />
+
         <EditText
             android:id="@+id/EntryHC2"
+            style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry"
-            style="@style/CategoryStyleActivityRight"/>
+            android:textColor="@color/Entry" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
-        >
+        android:layout_weight="1.2">
+
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/HC3"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/HC3" />
+
         <EditText
             android:id="@+id/EntryHC3"
+            style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry"
-            style="@style/CategoryStyleActivityRight"/>
+            android:textColor="@color/Entry" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.2"
-        >
+        android:layout_weight="1.2">
+
         <TextView
+            style="@style/CategoryStyleActivity"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="@string/Doxology"
-            style="@style/CategoryStyleActivity"/>
+            android:text="@string/Doxology" />
+
         <EditText
             android:id="@+id/EntryDoxology"
+            style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry"
-            style="@style/CategoryStyleActivityRight"/>
+            android:textColor="@color/Entry" />
 
 
     </LinearLayout>
@@ -216,8 +258,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        >
+        android:layout_weight="1.5">
 
         <Button
             android:id="@+id/EntryAddEntry"

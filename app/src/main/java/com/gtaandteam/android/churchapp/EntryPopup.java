@@ -33,7 +33,7 @@ public class EntryPopup extends Activity {
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        String date = "Date :" + day + "/" + month + "/" + year ;
+        String date = "Date :" + day + "/" + (month+1) + "/" + year ;
 
         final String message = getIntent().getStringExtra("EXTRA_SESSION_ID");
         setContentView(R.layout.entry_popup);

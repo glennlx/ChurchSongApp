@@ -1,8 +1,10 @@
 package com.gtaandteam.android.churchapp;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,12 +15,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class EntryActivity extends AppCompatActivity {
 
     String message;
+    String open,bible,bday,off,conf,hc1,hc2,hc3,dox;
   //  DatabaseReference UserDb1;
 
     View.OnLongClickListener LongClick = new View.OnLongClickListener() {
@@ -41,6 +46,8 @@ TODO: particular value is more than a month ago.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
+
+        final String LOG_TAG = this.getClass().getSimpleName();
 
         final EditText opening = (EditText)findViewById(R.id.EntryOpening);
         opening.setOnLongClickListener(LongClick);
@@ -81,11 +88,22 @@ TODO: particular value is more than a month ago.
             @Override
             public void onClick(View v) {
 
-                message = "Opening :" +opening.getText().toString() + "\nBible Reading : "
-                        + bibleReading.getText().toString()+ "\nThanksgiving : " + thanksGiving.getText().toString() + "\nOffertory : "
-                        + offertory.getText().toString() + "\nConfession: " + confession.getText().toString()
-                        + "\nHC1: " + HC1.getText().toString() + "\nHC2 :"+ HC2.getText().toString() + "\nHC3 :"
-                        + HC3.getText().toString() + "\nDoxology :" +Doxology.getText().toString();
+                open=opening.getText().toString();
+                bible=bibleReading.getText().toString();
+                bday=thanksGiving.getText().toString();
+                off=offertory.getText().toString();
+                conf=confession.getText().toString();
+                hc1=HC1.getText().toString();
+                hc2=HC2.getText().toString();
+                hc3=HC3.getText().toString();
+                dox=Doxology.getText().toString();
+
+                message = "Opening :" + open + "\nBible Reading : "
+                        + bible + "\nThanksgiving : " + bday + "\nOffertory : "
+                        + off + "\nConfession: " + conf
+                        + "\nHC1: " + hc1 + "\nHC2 :"+ hc2 + "\nHC3 :"
+                        + hc3 + "\nDoxology :" + dox ;
+
 
                 /*opening.setText("");
                 bibleReading.setText("");
@@ -96,16 +114,35 @@ TODO: particular value is more than a month ago.
                 HC2.setText("");
                 HC3.setText("");
                 Doxology.setText("");*/
+                DatabaseReference UserDb1;
 
-                /*HashMap<String,String> Data= new HashMap<>();
-                Data.put("Name", rName);
-                Data.put("Email", Email);
-                Data.put("Phone", PhoneNumber);
-                Data.put("LoginDate", Date);
-                Data.put("FCMToken",localFCM);
 
-                Log.d(LOG_TAG,"Hashmap Done");*/
+                HashMap<String,String> Data= new HashMap<>();
+                Data.put("Opening", open);
+                Data.put("Bible", bible);
+                Data.put("Bday", bday);
+                Data.put("Off", off);
+                Data.put("Conf",conf);
+                Data.put("HC1",hc1);
+                Data.put("HC2",hc2);
+                Data.put("HC3",hc3);
+                Data.put("Dox",dox);
 
+                Toast.makeText(getApplicationContext(),"Hashmap Done",Toast.LENGTH_SHORT).show();
+                android.icu.util.Calendar cal = android.icu.util.Calendar.getInstance();
+                int year = cal.get(android.icu.util.Calendar.YEAR);
+                int month = cal.get(android.icu.util.Calendar.MONTH);
+                int day = cal.get(android.icu.util.Calendar.DAY_OF_MONTH);
+
+                String date = day + "-" + (month+1) + "-" + year ;
+                Toast.makeText(getApplicationContext(),date,Toast.LENGTH_SHORT).show();
+                UserDb1 = FirebaseDatabase.getInstance().getReference().child("SundayEntries");
+                UserDb1.child(date).setValue(Data).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
 
                 Intent intent  = new Intent(EntryActivity.this, EntryPopup.class);
                 intent.putExtra("EXTRA_SESSION_ID", message);

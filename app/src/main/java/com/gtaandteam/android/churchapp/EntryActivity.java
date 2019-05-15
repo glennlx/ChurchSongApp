@@ -24,6 +24,7 @@ public class EntryActivity extends AppCompatActivity {
 
     String message;
     String open,bible,bday,off,conf,hc1,hc2,hc3,dox;
+    public HashMap<String,String> Data;
   //  DatabaseReference UserDb1;
 
     View.OnLongClickListener LongClick = new View.OnLongClickListener() {
@@ -114,19 +115,19 @@ TODO: particular value is more than a month ago.
                 HC2.setText("");
                 HC3.setText("");
                 Doxology.setText("");*/
-                DatabaseReference UserDb1;
+                DatabaseReference UserDb1,UserDb2,UserDb3,UserDb4,UserDb5,UserDb6,UserDb7,UserDb8,UserDb9,UserDb10;
 
 
-                HashMap<String,String> Data= new HashMap<>();
+                Data= new HashMap<>();
                 Data.put("Opening", open);
                 Data.put("Bible", bible);
-                Data.put("Bday", bday);
-                Data.put("Off", off);
-                Data.put("Conf",conf);
+                Data.put("Thanksgiving", bday);
+                Data.put("Offertory", off);
+                Data.put("Confession",conf);
                 Data.put("HC1",hc1);
                 Data.put("HC2",hc2);
                 Data.put("HC3",hc3);
-                Data.put("Dox",dox);
+                Data.put("Doxology",dox);
 
                 Toast.makeText(getApplicationContext(),"Hashmap Done",Toast.LENGTH_SHORT).show();
                 android.icu.util.Calendar cal = android.icu.util.Calendar.getInstance();
@@ -136,13 +137,87 @@ TODO: particular value is more than a month ago.
 
                 String date = day + "-" + (month+1) + "-" + year ;
                 Toast.makeText(getApplicationContext(),date,Toast.LENGTH_SHORT).show();
-                UserDb1 = FirebaseDatabase.getInstance().getReference().child("SundayEntries");
+                UserDb1 = FirebaseDatabase.getInstance().getReference().child("Sunday Entries");
                 UserDb1.child(date).setValue(Data).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
                     }
                 });
+
+                UserDb2 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("Opening");
+                UserDb2.child(Data.get("Opening")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb3= FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("Bible");
+                UserDb3.child(Data.get("Bible")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb4 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("Thanksgiving");
+                UserDb4.child(Data.get("Thanksgiving")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb5 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("Offertory");
+                UserDb5.child(Data.get("Offertory")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb6 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("Confession");
+                UserDb6.child(Data.get("Confession")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb7 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("HC1");
+                UserDb7.child(Data.get("HC1")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb8 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("HC2");
+                UserDb8.child(Data.get("HC2")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb9 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("HC3");
+                UserDb9.child(Data.get("HC3")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                UserDb10 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child("Doxology");
+                UserDb10.child(Data.get("Doxology")).setValue(date).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        //Toast.makeText(getApplicationContext(),"Inserted To Database",Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
 
                 Intent intent  = new Intent(EntryActivity.this, EntryPopup.class);
                 intent.putExtra("EXTRA_SESSION_ID", message);

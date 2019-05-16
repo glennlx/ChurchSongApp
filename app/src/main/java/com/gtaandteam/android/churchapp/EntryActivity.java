@@ -25,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class EntryActivity extends AppCompatActivity {
 
     String message;
+    //to fetch todays date//
+    String todaysDate;
     String open,bible,bday,off,conf,hc1,hc2,hc3,dox;
     public HashMap<String,String> Data;
   //  DatabaseReference UserDb1;
@@ -32,8 +34,74 @@ public class EntryActivity extends AppCompatActivity {
     View.OnLongClickListener LongClick = new View.OnLongClickListener() {
         @Override
         public boolean onLongClick(View v) {
-            Toast toast= Toast.makeText(EntryActivity.this, "Long press detected",Toast.LENGTH_SHORT);
-            toast.show();
+            
+            
+            String key= ((EditText)v).getText().toString();
+
+            //fetching all entries//
+
+            UserDb7 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child(key);
+            UserDb7.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                    HashMap<String, String> allEntries = (HashMap<String, String>) dataSnapshot.getValue();
+
+                    //filtering based on date to pick data with date older than a month..
+
+                    List older = new ArrayList<String>();
+
+                    for(String keys: allEntries.keySet()){
+
+                        String date=allEntries.get(keys);
+
+                        int yearIndex=date.lastIndexOf("-");
+                        int monthIndex=date.indexOf("-");
+                        int todaysYearIndex=todaysDate.lastIndexOf("-");
+                        int todaysMonthImdex=todaysDate.indexOf("-");
+
+                        int year=Intger.parseInt(date.substring(yearIndex+1, date.length()));
+                        int month=Intger.parseInt(date.substring(monthIndex+1, yearIndex));
+
+                        int todaysYear=Intger.parseInt(todaysDate.substring(todaysYearIndex+1, todaysDate.length()));
+                        int todaysMonth=Intger.parseInt(todaysDate.substring(todaysMonthIndex+1, todaysYearIndex));
+
+                        /*comparing year
+                          if on same year
+                          then compare month
+                        */
+                        if(todaysYear-year==0){
+                            if(todaysMonth-month >= 1)
+                                older.add(keys);
+                        }
+                        else{
+                            older.add(keys);
+                        }
+
+                    }
+
+                    //pick a random index from 
+                    Random random= new Random();
+                    int pickIndex= random.nextInt(older.size());
+
+                    //to show selected key//
+                    android.widget.Toast.makeText(getApplicationContext(), "selected: "+older.get(pickIndex), Toast.LENGTH_SHORT).show();
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+
+
+
+            
+            
+            /*Toast toast= Toast.makeText(EntryActivity.this, "Long press detected",Toast.LENGTH_SHORT);
+            toast.show();*/
             return false;
         }
 };
@@ -49,6 +117,14 @@ TODO: particular value is more than a month ago.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
+        
+        //fetching todays date//
+        android.icu.util.Calendar cal = android.icu.util.Calendar.getInstance();
+        int year = cal.get(android.icu.util.Calendar.YEAR);
+        int month = cal.get(android.icu.util.Calendar.MONTH);
+        int day = cal.get(android.icu.util.Calendar.DAY_OF_MONTH);
+        todaysDate = day + "-" + (month+1) + "-" + year ;
+
 
         final String LOG_TAG = this.getClass().getSimpleName();
 

@@ -13,14 +13,20 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Random;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class EntryActivity extends AppCompatActivity {
 
@@ -29,7 +35,7 @@ public class EntryActivity extends AppCompatActivity {
     String todaysDate;
     String open,bible,bday,off,conf,hc1,hc2,hc3,dox;
     public HashMap<String,String> Data;
-  //  DatabaseReference UserDb1;
+    DatabaseReference UserDb71;
 
     View.OnLongClickListener LongClick = new View.OnLongClickListener() {
         @Override
@@ -40,8 +46,8 @@ public class EntryActivity extends AppCompatActivity {
 
             //fetching all entries//
 
-            UserDb7 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child(key);
-            UserDb7.addValueEventListener(new ValueEventListener() {
+            UserDb71 = FirebaseDatabase.getInstance().getReference().child("Malayalam Service").child(key);
+            UserDb71.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -58,13 +64,13 @@ public class EntryActivity extends AppCompatActivity {
                         int yearIndex=date.lastIndexOf("-");
                         int monthIndex=date.indexOf("-");
                         int todaysYearIndex=todaysDate.lastIndexOf("-");
-                        int todaysMonthImdex=todaysDate.indexOf("-");
+                        int todaysMonthIndex=todaysDate.indexOf("-");
 
-                        int year=Intger.parseInt(date.substring(yearIndex+1, date.length()));
-                        int month=Intger.parseInt(date.substring(monthIndex+1, yearIndex));
+                        int year=Integer.parseInt(date.substring(yearIndex+1, date.length()));
+                        int month=Integer.parseInt(date.substring(monthIndex+1, yearIndex));
 
-                        int todaysYear=Intger.parseInt(todaysDate.substring(todaysYearIndex+1, todaysDate.length()));
-                        int todaysMonth=Intger.parseInt(todaysDate.substring(todaysMonthIndex+1, todaysYearIndex));
+                        int todaysYear=Integer.parseInt(todaysDate.substring(todaysYearIndex+1, todaysDate.length()));
+                        int todaysMonth=Integer.parseInt(todaysDate.substring(todaysMonthIndex+1, todaysYearIndex));
 
                         /*comparing year
                           if on same year

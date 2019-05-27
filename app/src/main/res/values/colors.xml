@@ -3,11 +3,12 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="Entry">#002f37</color>
-    <color name="Add">#00c3e3</color>
-    <color name="Search">#006b7d</color>
-    <color name="Background">#d7f5ff</color>
+    <color name="Entry">#002F37</color>
+    <color name="Add">#0495AD</color>
+    <color name="Search">#006B7D</color>
+    <color name="Background">#D7F5FF</color>
     <color name="Misc">#c8dfe3</color>
     <color name="MidValue">#FFFFFF</color>
+    <color name="Background1">#90E3FF</color>
 
 </resources>

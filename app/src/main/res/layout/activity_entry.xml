@@ -21,12 +21,15 @@
 
         <Spinner
             android:id="@+id/spinner2"
-            android:layout_width="wrap_content"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/white"
-            android:backgroundTint="@android:color/white"
-            android:popupBackground="@android:color/white" />
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:padding="0dp"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/EntryOpening"
@@ -34,8 +37,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
 
     </LinearLayout>
@@ -52,14 +58,28 @@
             android:layout_weight="2"
             android:text="@string/Bible_Reading" />
 
+        <Spinner
+            android:id="@+id/spinner"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryBible"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
 
     </LinearLayout>
@@ -76,15 +96,29 @@
             android:layout_weight="2"
             android:text="@string/ThanksGiving" />
 
+        <Spinner
+            android:id="@+id/spinner3"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryThanksGiving"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:hint="Tap to enter, hold to generate"
+            android:background="@color/Entry"
 
-            android:textColor="@color/Entry" />
+            android:hint="Tap to enter, hold to generate"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
     </LinearLayout>
 
@@ -100,14 +134,28 @@
             android:layout_weight="2"
             android:text="@string/Offertory" />
 
+        <Spinner
+            android:id="@+id/spinner5"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryOffertory"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
     </LinearLayout>
 
@@ -123,14 +171,28 @@
             android:layout_weight="2"
             android:text="@string/Confession" />
 
+        <Spinner
+            android:id="@+id/spinner6"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryConfession"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
 
     </LinearLayout>
@@ -147,14 +209,28 @@
             android:layout_weight="2"
             android:text="@string/HC1" />
 
+        <Spinner
+            android:id="@+id/spinner7"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryHC1"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
     </LinearLayout>
 
@@ -170,14 +246,28 @@
             android:layout_weight="2"
             android:text="@string/HC2" />
 
+        <Spinner
+            android:id="@+id/spinner8"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryHC2"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
     </LinearLayout>
 
@@ -193,14 +283,28 @@
             android:layout_weight="2"
             android:text="@string/HC3" />
 
+        <Spinner
+            android:id="@+id/spinner9"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryHC3"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
     </LinearLayout>
 
@@ -216,14 +320,28 @@
             android:layout_weight="2"
             android:text="@string/Doxology" />
 
+        <Spinner
+            android:id="@+id/spinner10"
+            style="@style/Platform.Widget.AppCompat.Spinner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
         <EditText
             android:id="@+id/EntryDoxology"
             style="@style/CategoryStyleActivityRight"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
+            android:background="@color/Entry"
             android:hint="Tap to enter, hold to generate"
-            android:textColor="@color/Entry" />
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
 
 
     </LinearLayout>

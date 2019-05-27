@@ -134,7 +134,15 @@ TODO: particular value is more than a month ago.
 
         final String LOG_TAG = this.getClass().getSimpleName();
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner2);
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+        Spinner spinner3 = (Spinner) findViewById(R.id.spinner3);
+        Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
+        Spinner spinner6 = (Spinner) findViewById(R.id.spinner6);
+        Spinner spinner7= (Spinner) findViewById(R.id.spinner7);
+        Spinner spinner8 = (Spinner) findViewById(R.id.spinner8);
+        Spinner spinner9 = (Spinner) findViewById(R.id.spinner9);
+        Spinner spinner10 = (Spinner) findViewById(R.id.spinner10);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.TypeOfSong, android.R.layout.simple_spinner_item);
@@ -142,6 +150,15 @@ TODO: particular value is more than a month ago.
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
+        spinner3.setAdapter(adapter);
+        spinner5.setAdapter(adapter);
+        spinner6.setAdapter(adapter);
+        spinner7.setAdapter(adapter);
+        spinner8.setAdapter(adapter);
+        spinner9.setAdapter(adapter);
+        spinner10.setAdapter(adapter);
+
 
         final EditText opening = (EditText)findViewById(R.id.EntryOpening);
         opening.setOnLongClickListener(LongClick);

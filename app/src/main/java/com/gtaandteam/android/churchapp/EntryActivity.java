@@ -196,23 +196,27 @@ public class EntryActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 //Toast.makeText(EntryActivity.this, spinner1.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
-                open=spinner1.getSelectedItem().toString() + " " + opening.getText().toString();
-                bible=bibleReading.getText().toString();
-                bday=thanksGiving.getText().toString();
-                off=offertory.getText().toString();
-                conf=confession.getText().toString();
-                hc1=HC1.getText().toString();
-                hc2=HC2.getText().toString();
-                hc3=HC3.getText().toString();
-                dox=Doxology.getText().toString();
+                open = spinner1.getSelectedItem().toString() + " " + opening.getText().toString();
+                bible = spinner2.getSelectedItem().toString() + " " + bibleReading.getText().toString();
+                bday = spinner3.getSelectedItem().toString() + " " + thanksGiving.getText().toString();
+                off = spinner4.getSelectedItem().toString() + " " + offertory.getText().toString();
+                conf = spinner5.getSelectedItem().toString() + " " + confession.getText().toString();
+                hc1 = spinner6.getSelectedItem().toString() + " " + HC1.getText().toString();
+                hc2 = spinner7.getSelectedItem().toString() + " " + HC2.getText().toString();
+                hc3 = spinner8.getSelectedItem().toString() + " " + HC3.getText().toString();
+                dox = spinner9.getSelectedItem().toString() + " " + Doxology.getText().toString();
 
 
 
-                message = "Opening :" + open + "\nBible Reading : "
-                        + bible + "\nThanksgiving : " + bday + "\nOffertory : "
-                        + off + "\nConfession: " + conf
-                        + "\nHC1: " + hc1 + "\nHC2 :"+ hc2 + "\nHC3 :"
-                        + hc3 + "\nDoxology :" + dox ;
+                message = "Opening :\t\t\t\t\t\t\t" + open
+                        + "\nBible Reading :\t\t" + bible
+                        + "\nThanksgiving :\t\t" + bday
+                        + "\nOffertory :\t\t\t\t\t\t\t" + off
+                        + "\nConfession :\t\t\t\t" + conf
+                        + "\nHC1 :\t\t\t\t\t\t\t\t\t\t\t" + hc1
+                        + "\nHC2 :\t\t\t\t\t\t\t\t\t\t\t"+ hc2
+                        + "\nHC3 :\t\t\t\t\t\t\t\t\t\t\t" + hc3
+                        + "\nDoxology :\t\t\t\t\t\t" + dox ;
 
 
                 /*opening.setText("");

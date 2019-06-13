@@ -38,7 +38,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -76,7 +77,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -115,7 +117,8 @@
             android:layout_weight="3"
             android:background="@color/Entry"
 
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -152,7 +155,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -189,7 +193,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -227,7 +232,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -264,7 +270,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -301,7 +308,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />
@@ -338,7 +346,8 @@
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:background="@color/Entry"
-            android:hint="Tap to enter, hold to generate"
+            android:hint="Tap to manually enter\nHold to auto - generate"
+            android:inputType="number"
             android:textColor="@android:color/white"
             android:textColorHint="@android:color/white"
             android:textColorLink="@android:color/white" />

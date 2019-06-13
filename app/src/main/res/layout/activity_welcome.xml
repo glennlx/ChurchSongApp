@@ -6,20 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".WelcomeActivity">
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/ETStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Welcome to"
+        android:textAllCaps="true"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="199dp"
+        android:layout_height="188dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.073" />
-        //app:srcCompat="@drawable/new_app_logo" />
+        app:layout_constraintVertical_bias="0.073"
+        app:srcCompat="@drawable/mtclogo" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/password_confirm_layout"
@@ -67,27 +84,28 @@
         style="@style/ETStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Welcome to"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="GTA Production's"
         android:textAllCaps="true"
         android:textColor="@color/blue"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView4"
         style="@style/ETStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Wellcure Clinic"
+        android:layout_marginEnd="8dp"
+        android:text="Mar Thoma Church"
         android:textAllCaps="true"
         android:textColor="@color/blue"
         android:textSize="26sp"
@@ -101,10 +119,10 @@
         style="@style/ETStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Appointment Booking App"
+        android:layout_marginEnd="8dp"
+        android:text="Song Helper App"
         android:textAllCaps="true"
         android:textColor="@color/blue"
         android:textStyle="bold"

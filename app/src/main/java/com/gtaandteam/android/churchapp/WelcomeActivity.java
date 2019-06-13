@@ -169,7 +169,7 @@ public class WelcomeActivity extends AppCompatActivity {
                         {
                             AutoLogin.dismiss();
                             finish();
-                            Intent i =new Intent(WelcomeActivity.this, EntryActivity.class);
+                            Intent i =new Intent(WelcomeActivity.this, MainActivity.class);
                             //i.putExtra("loginMode",1);
                             finish();
                             startActivity(i);

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -60,10 +61,10 @@ public class OTPLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_otplogin);
 
         //Linking to views
-        SwitchToEmailTV = findViewById(R.id.SwitchToEmailTV);
-        SendOTPBTN = findViewById(R.id.SendOTPBTN);
-        PhoneOTPTV = findViewById(R.id.PhoneNumberET);
-        RegisterBTN = findViewById(R.id.RegisterBTN);
+        SwitchToEmailTV = (TextView) findViewById(R.id.SwitchToEmailTV);
+        SendOTPBTN = (Button) findViewById(R.id.SendOTPBTN);
+        PhoneOTPTV = (EditText) findViewById(R.id.PhoneNumberET);
+        RegisterBTN = (Button) findViewById(R.id.RegisterBTN);
 
 
 
@@ -97,11 +98,11 @@ public class OTPLoginActivity extends AppCompatActivity {
         Progress =new ProgressDialog(this);
 
 
-        MyToolbar = findViewById(R.id.MyToolbar);
+        /*MyToolbar = findViewById(R.id.MyToolbar);
         setSupportActionBar(MyToolbar);
         ActionBar ab = getSupportActionBar();
         // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);*/
 
         PhoneOTPTV.setText("+91 ");
         Selection.setSelection(PhoneOTPTV.getText(), PhoneOTPTV.getText().length());

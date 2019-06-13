@@ -10,14 +10,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/Entry">
-        <TextView
-            android:id="@+id/Enter"
-            android:layout_width="match_parent"
-            style="@style/CategoryStyle"
-            android:text="Enter"
-            android:background="?android:attr/selectableItemBackground"
 
-            />
+                <TextView
+                    android:id="@+id/Enter"
+                    style="@style/CategoryStyle"
+                    android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="New Entry"
+
+                    />
 </FrameLayout>
 
         <FrameLayout

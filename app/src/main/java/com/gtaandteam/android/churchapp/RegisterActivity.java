@@ -62,12 +62,12 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //Linking to views
-        UsernameET =findViewById(R.id.UserNameET);
-        PasswordET =findViewById(R.id.PasswordET);
-        ConfirmPasswordET = findViewById(R.id.ConfirmPasswordET);
-        PhoneNumberET = findViewById(R.id.PhoneNumberET);
-        RegisterBTN =findViewById(R.id.RegisterBTN);
-        LoginBTN = findViewById(R.id.LoginBTN);
+        UsernameET = (EditText) findViewById(R.id.UserNameET);
+        PasswordET = (EditText) findViewById(R.id.PasswordET);
+        ConfirmPasswordET =  (EditText) findViewById(R.id.ConfirmPasswordET);
+        PhoneNumberET =  (EditText) findViewById(R.id.PhoneNumberET);
+        RegisterBTN = (Button) findViewById(R.id.RegisterBTN);
+        LoginBTN = (Button) findViewById(R.id.LoginBTN);
 
         FbAuth = FirebaseAuth.getInstance();
         PhoneNumberET.setText("+91 ");
@@ -101,11 +101,11 @@ public class RegisterActivity extends AppCompatActivity {
             }
         }
 
-        MyToolbar = findViewById(R.id.MyToolbar);
+        /*MyToolbar = findViewById(R.id.MyToolbar);
         setSupportActionBar(MyToolbar);
         ActionBar ab = getSupportActionBar();
         // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);*/
 
         PhoneNumberET.addTextChangedListener(new TextWatcher() {
             @Override

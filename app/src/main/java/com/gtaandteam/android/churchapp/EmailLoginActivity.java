@@ -63,10 +63,10 @@ public class EmailLoginActivity extends AppCompatActivity {
         Progress =new ProgressDialog(this);
 
         //MyToolbar = findViewById(R.id.MyToolbar);
-        setSupportActionBar(MyToolbar);
+        /*setSupportActionBar(MyToolbar);
         ActionBar ab = getSupportActionBar();
         // Enable the Up button
-        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);*/
 
         Intent intent=getIntent();
         String Parent=intent.getStringExtra("Parent");
@@ -209,7 +209,7 @@ public class EmailLoginActivity extends AppCompatActivity {
                             //we start doctor activity here
                             //Toast.makeText(EmailLoginActivity.this,"Login Successful",Toast.LENGTH_SHORT).show();
                             finish();
-                            Intent i =new Intent(EmailLoginActivity.this, EntryActivity.class);
+                            Intent i =new Intent(EmailLoginActivity.this, MainActivity.class);
                             i.putExtra("loginMode",1);
                             startActivity(i);
                         }

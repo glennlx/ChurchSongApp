@@ -43,14 +43,16 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <TextView
-            android:background="#f5fcff"
+            android:id="@+id/Lyric"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="20sp"
-            android:textStyle="italic"
+            android:background="#f5fcff"
             android:fontFamily="sans-serif-condensed"
-            android:text="Exorcizamus te, omnis immundus spiritus, omnis satanica potestas, omnis incursio infernalis adversarii, omnis legio, omnis congregatio et secta diabolica. Ergo, omnis legio diabolica, adiuramus te...cessa decipere humanas creaturas, eisque æternæ perditionìs venenum propinare...Vade, satana, inventor et magister omnis fallaciæ, hostis humanæ salutis...Humiliare sub potenti manu Dei; contremisce et effuge, invocato a nobis sancto et terribili nomine...quem inferi tremunt...Ab insidiis diaboli, libera nos, Domine. Ut Ecclesiam tuam secura tibi facias libertate servire, te rogamus, audi nos. Translation:We exorcise you, every impure spirit, every satanic power, every incursion of the infernal adversary, every legion, every congregation and diabolical sect. Therefore, diabolical legions, we adjure you ... Cease to deceive human creatures, and to give to them the poison of eternal damnation; ... Be gone, Satan, inventor and master of all deceit, enemy of man's salvation ... Be humble under the mighty hand of God; tremble and flee when we invoke the Holy and Terrible Name at which those down below tremble ... ... from the snares of the devil, deliver us, O Lord . That Thy Church may serve Thee in peace and liberty to serve, we ask Thee, hear us."/>
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="20sp" />
     </ScrollView>
 
 

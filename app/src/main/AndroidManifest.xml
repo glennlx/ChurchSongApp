@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DisplayActivity"></activity>
         <activity
             android:name=".WelcomeActivity"
             android:label="Song Helper"
@@ -20,12 +21,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gtaandteam.android.churchapp.MainActivity"
+            android:name=".MainActivity"
             android:label="Menu of Options"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
-            android:name="com.gtaandteam.android.churchapp.EntryActivity"
+            android:name=".EntryActivity"
             android:label="@string/title_activity_Entry"
             android:screenOrientation="portrait" />
         <activity
@@ -46,21 +46,20 @@
             android:name=".EmailLoginActivity"
             android:label="Login using Email "
             android:parentActivityName=".WelcomeActivity"
-
-            android:screenOrientation="portrait" />
-        <!--android:theme="@style/AppTheme.NoActionBar"-->
+            android:screenOrientation="portrait" /> <!-- android:theme="@style/AppTheme.NoActionBar" -->
         <activity
             android:name=".GenerateActivity"
             android:label="@string/title_activity_generate"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.gtaandteam.android.churchapp.SearchActivity"
+            android:name=".SearchActivity"
             android:label="@string/title_activity_search"
             android:screenOrientation="portrait" />
-        <activity android:name="com.gtaandteam.android.churchapp.AddActivity" />
-        <activity android:name="com.gtaandteam.android.churchapp.EntryPopup"
-            android:theme="@style/AppTheme.Custom"
-            android:label="Latest Entry"></activity>
+        <activity android:name=".AddActivity" />
+        <activity
+            android:name=".EntryPopup"
+            android:label="Latest Entry"
+            android:theme="@style/AppTheme.Custom" />
     </application>
 
 </manifest>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gtaandteam.android.wellcure.EmailLoginActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/MyToolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:id="@+id/LoginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MyToolbar"
+        app:layout_constraintVertical_bias="0.369">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp">
+
+            <EditText
+                android:id="@+id/UsernameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email ID "
+                android:inputType="textEmailAddress"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp">
+
+            <EditText
+                android:id="@+id/PasswordET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/LoginBTN"
+        style="@style/ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="@+id/RegisterBTN"
+        app:layout_constraintStart_toStartOf="@+id/RegisterBTN"
+        app:layout_constraintTop_toBottomOf="@+id/LoginLayout" />
+
+    <TextView
+        android:id="@+id/ForgotPasswordTV"
+        style="@style/ETStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Forgot password?"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@+id/LoginLayout"
+        app:layout_constraintTop_toBottomOf="@+id/LoginLayout" />
+
+    <TextView
+        android:id="@+id/NoAccountTV"
+        style="@style/ETStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="Dont Have An Account?"
+        app:layout_constraintEnd_toEndOf="@+id/RegisterBTN"
+        app:layout_constraintStart_toStartOf="@+id/RegisterBTN"
+        app:layout_constraintTop_toBottomOf="@+id/LoginBTN" />
+
+    <Button
+        android:id="@+id/RegisterBTN"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NoAccountTV" />
+
+    <TextView
+        android:id="@+id/SwitchToOTPTV"
+        style="@style/ETStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login using OTP?"
+        android:textColor="@color/blue"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/LoginLayout"
+        app:layout_constraintTop_toBottomOf="@+id/LoginLayout" />
+
+</android.support.constraint.ConstraintLayout>

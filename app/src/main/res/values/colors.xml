@@ -10,5 +10,12 @@
     <color name="Misc">#c8dfe3</color>
     <color name="MidValue">#FFFFFF</color>
     <color name="Background1">#90E3FF</color>
+    <color name="white">#ffffff</color>
+    <color name="blue">#2980b9</color>
+    <color name="black">#000000</color>
+    <color name="red">#ee3a3a</color>
+    <color name="darkred">#b50707</color>
+    <color name="lightred">#dd5454</color>
+    <color name="darkred1">#f95656</color>
 
 </resources>

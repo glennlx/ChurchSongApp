@@ -15,29 +15,48 @@
         style="@style/CategoryStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
+        android:background="@color/Search"
         android:fontFamily="sans-serif-condensed"
-        android:background="@color/Search"/>
+        android:text="Search for Lyrics\nChoose Song Type and Enter Search Term"
+        android:textAlignment="center" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
-        android:id="@+id/SearchSpinner"
-        android:layout_width="0dp"
-        android:layout_weight="3"
-        app:hintText="Tap to search"
-        android:background="@color/Background"
-        android:layout_height="48dp">
-    </com.toptoche.searchablespinnerlibrary.SearchableSpinner>
 
-        <Button
+        <Spinner
+            android:id="@+id/spinner_search"
+            style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
-            android:text="Search"
-            android:background="@color/Misc"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:fontFamily="sans-serif-condensed"/>
+            android:background="@color/Add"
+            android:backgroundTint="@color/Background"
+            android:padding="0dp"
+            android:popupBackground="@color/Background"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/entrySearch"
+            style="@style/CategoryStyleActivityRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Entry"
+            android:hint="Enter Search Term"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:textColorLink="@android:color/white" />
+
+        <Button
+            android:id="@+id/button_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/Misc"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Search" />
     </LinearLayout>
 
     <ScrollView

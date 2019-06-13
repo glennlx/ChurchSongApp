@@ -26,26 +26,39 @@
             android:layout_height="wrap_content"
             android:background="@color/Search"
             >
+
                 <TextView
                     android:id="@+id/search"
-                    android:layout_width="match_parent"
                     style="@style/CategoryStyle"
-                    android:text="Search"
+                    android:layout_width="match_parent"
                     android:background="?android:attr/selectableItemBackground"
-                    />
+                    android:text="Search Lyrics" />
         </FrameLayout>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/Add"
             >
+
                 <TextView
                     android:id="@+id/Add"
-                    android:layout_width="match_parent"
                     style="@style/CategoryStyle"
-                    android:text="Add"
+                    android:layout_width="match_parent"
                     android:background="?android:attr/selectableItemBackground"
-                    />
+                    android:text="Edit Lyrics" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Add2">
+
+                <TextView
+                    android:id="@+id/Add"
+                    style="@style/CategoryStyle"
+                    android:layout_width="match_parent"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:text="Display Entry" />
         </FrameLayout>
 
 </LinearLayout>

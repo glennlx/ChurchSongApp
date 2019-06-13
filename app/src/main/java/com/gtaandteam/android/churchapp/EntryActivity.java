@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -36,6 +35,7 @@ public class EntryActivity extends AppCompatActivity {
     String open,bible,bday,off,conf,hc1,hc2,hc3,dox;
     public HashMap<String,String> Data;
     DatabaseReference UserDb71;
+    Spinner spinner1,spinner2,spinner3,spinner4,spinner5,spinner6,spinner7,spinner8,spinner9;
 
     View.OnLongClickListener LongClick = new View.OnLongClickListener() {
         @Override
@@ -112,12 +112,6 @@ public class EntryActivity extends AppCompatActivity {
         }
 };
 
-/*TODO: Whenever Add Entry button is pressed, it must store in the database, the respective value for the field along with a timestamp.
-TODO: Each value should be stored separately
-TODO: The OnLongClick fetches one of the values for that particular field from one of the old entries such that the old timestamp for that
-TODO: particular value is more than a month ago.
- */
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,30 +128,32 @@ TODO: particular value is more than a month ago.
 
         final String LOG_TAG = this.getClass().getSimpleName();
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
-        Spinner spinner3 = (Spinner) findViewById(R.id.spinner3);
-        Spinner spinner5 = (Spinner) findViewById(R.id.spinner5);
-        Spinner spinner6 = (Spinner) findViewById(R.id.spinner6);
-        Spinner spinner7= (Spinner) findViewById(R.id.spinner7);
-        Spinner spinner8 = (Spinner) findViewById(R.id.spinner8);
-        Spinner spinner9 = (Spinner) findViewById(R.id.spinner9);
-        Spinner spinner10 = (Spinner) findViewById(R.id.spinner10);
+
+        spinner1 = (Spinner) findViewById(R.id.spinner1);
+        spinner2 = (Spinner) findViewById(R.id.spinner2);
+        spinner3 = (Spinner) findViewById(R.id.spinner3);
+        spinner4 = (Spinner) findViewById(R.id.spinner4);
+        spinner5 = (Spinner) findViewById(R.id.spinner5);
+        spinner6 = (Spinner) findViewById(R.id.spinner6);
+        spinner7 = (Spinner) findViewById(R.id.spinner7);
+        spinner8 = (Spinner) findViewById(R.id.spinner8);
+        spinner9 = (Spinner) findViewById(R.id.spinner9);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.TypeOfSong, android.R.layout.simple_spinner_item);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        spinner.setAdapter(adapter);
+        spinner1.setAdapter(adapter);
         spinner2.setAdapter(adapter);
         spinner3.setAdapter(adapter);
+        spinner4.setAdapter(adapter);
         spinner5.setAdapter(adapter);
         spinner6.setAdapter(adapter);
         spinner7.setAdapter(adapter);
         spinner8.setAdapter(adapter);
         spinner9.setAdapter(adapter);
-        spinner10.setAdapter(adapter);
+
 
 
         final EditText opening = (EditText)findViewById(R.id.EntryOpening);
@@ -199,7 +195,8 @@ TODO: particular value is more than a month ago.
             @Override
             public void onClick(View v) {
 
-                open=opening.getText().toString();
+                //Toast.makeText(EntryActivity.this, spinner1.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+                open=spinner1.getSelectedItem().toString() + " " + opening.getText().toString();
                 bible=bibleReading.getText().toString();
                 bday=thanksGiving.getText().toString();
                 off=offertory.getText().toString();
@@ -208,6 +205,8 @@ TODO: particular value is more than a month ago.
                 hc2=HC2.getText().toString();
                 hc3=HC3.getText().toString();
                 dox=Doxology.getText().toString();
+
+
 
                 message = "Opening :" + open + "\nBible Reading : "
                         + bible + "\nThanksgiving : " + bday + "\nOffertory : "
@@ -239,14 +238,14 @@ TODO: particular value is more than a month ago.
                 Data.put("HC3",hc3);
                 Data.put("Doxology",dox);
 
-                Toast.makeText(getApplicationContext(),"Hashmap Done",Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),"Hashmap Done",Toast.LENGTH_SHORT).show();
                 android.icu.util.Calendar cal = android.icu.util.Calendar.getInstance();
                 int year = cal.get(android.icu.util.Calendar.YEAR);
                 int month = cal.get(android.icu.util.Calendar.MONTH);
                 int day = cal.get(android.icu.util.Calendar.DAY_OF_MONTH);
 
                 String date = day + "-" + (month+1) + "-" + year ;
-                Toast.makeText(getApplicationContext(),date,Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(),date,Toast.LENGTH_SHORT).show();
                 UserDb1 = FirebaseDatabase.getInstance().getReference().child("Sunday Entries");
                 UserDb1.child(date).setValue(Data).addOnCompleteListener(EntryActivity.this, new OnCompleteListener<Void>() {
                     @Override

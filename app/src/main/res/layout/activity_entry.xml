@@ -20,7 +20,7 @@
             android:text="@string/Opening" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinner1"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -59,7 +59,7 @@
             android:text="@string/Bible_Reading" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spinner2"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -135,7 +135,7 @@
             android:text="@string/Offertory" />
 
         <Spinner
-            android:id="@+id/spinner5"
+            android:id="@+id/spinner4"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -172,7 +172,7 @@
             android:text="@string/Confession" />
 
         <Spinner
-            android:id="@+id/spinner6"
+            android:id="@+id/spinner5"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -210,7 +210,7 @@
             android:text="@string/HC1" />
 
         <Spinner
-            android:id="@+id/spinner7"
+            android:id="@+id/spinner6"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -247,7 +247,7 @@
             android:text="@string/HC2" />
 
         <Spinner
-            android:id="@+id/spinner8"
+            android:id="@+id/spinner7"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -284,7 +284,7 @@
             android:text="@string/HC3" />
 
         <Spinner
-            android:id="@+id/spinner9"
+            android:id="@+id/spinner8"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -321,7 +321,7 @@
             android:text="@string/Doxology" />
 
         <Spinner
-            android:id="@+id/spinner10"
+            android:id="@+id/spinner9"
             style="@style/Platform.Widget.AppCompat.Spinner"
             android:layout_width="0dp"
             android:layout_height="match_parent"
